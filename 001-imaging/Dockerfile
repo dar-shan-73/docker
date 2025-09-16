@@ -1,5 +1,5 @@
 FROM   docker.io/redhat/ubi9-init
-RUN    dnf install -nginx -y
+RUN    dnf install nginx -y
 RUN    rm -rf /usr/share/nginx/html/*
 COPY   index.html /usr/share/nginx/html/index.html
 ENTRYPOINT [ "nginx", "-g", "daemon off;" ]
